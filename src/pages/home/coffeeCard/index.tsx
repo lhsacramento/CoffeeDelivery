@@ -22,6 +22,19 @@ export function CoffeeCard({name, img, type,description, price}: CoffeeCardProps
                 name: name,
                 amount: count,
                 price: price,
+                delivery: {
+                    address: {
+                        cep: '',
+                        rua:  '',
+                        numero:  '',
+                        bairro:  '',
+                        cidade:  '',
+                        complemento:  '',
+                        uf:  '',
+                    },
+                    phone:  '',
+                    methodPayment:  '',
+                },
             });
 
             setCount(0);
