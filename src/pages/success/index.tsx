@@ -2,11 +2,11 @@ import { ContentContainer, DollarIconContainer, MapPinIconContainer, OrderInfo, 
 import checkoutImg from '../../assets/img/checkoutImg.png';
 import {MapPin, Timer, CurrencyDollar} from '@phosphor-icons/react';
 import { useContext } from 'react';
-import { CartContext } from '../../contexts/CartContext';
+import { DeliveryContext } from '../../contexts/DeliveryContext';
 
 export function SuccessPage(){
     
-    const {delivery} = useContext(CartContext);
+    const { delivery } = useContext(DeliveryContext);
 
     return (
         <SuccessContainer>

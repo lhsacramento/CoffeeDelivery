@@ -5,11 +5,13 @@ import { IMaskInput } from 'react-imask';
 import { ShortCardCoffee } from './coffeeShortCard';
 import { CartContext } from '../../contexts/CartContext';
 import { useNavigate } from 'react-router-dom';
+import { DeliveryContext } from '../../contexts/DeliveryContext';
  
 export function CheckoutPage(){
 
     const navigate = useNavigate();
-    const {cartItens, checkoutDone} = useContext(CartContext);
+    const {cartItens} = useContext(CartContext);
+    const { setDeliveryLocation} = useContext(DeliveryContext);
 
     const [creditCardButtonSelected, setCreditCardButtonSelected] = useState(false);
     const [debitCardButtonSelected, setDebitCardButtonSelected] = useState(false);
@@ -82,7 +84,7 @@ export function CheckoutPage(){
                 phone: telefoneValue,
                 methodPayment: getMethodPayment(),
             };    
-            checkoutDone(deliveryInfo);
+            setDeliveryLocation(deliveryInfo);
             navigate('/success');
         }else{
             alert('Preencha todos os campos corretamente!');

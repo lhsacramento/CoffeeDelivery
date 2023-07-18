@@ -10,21 +10,6 @@ interface ProductProps{
     name: string,
     amount: number,
     price: number,
-    delivery: DeliveryProps,
-}
-
-interface DeliveryProps{
-    address: {
-        cep: string,
-        rua: string,
-        numero: string,
-        bairro: string,
-        cidade: string,
-        complemento?: string,
-        uf: string,
-    },
-    phone: string,
-    methodPayment: string,
 }
 
 interface RemoveProps{
@@ -33,15 +18,12 @@ interface RemoveProps{
 
 interface CartProps{
     cartItens: ProductProps[] | undefined,
-    delivery: DeliveryProps | undefined,
     addToCart: (product: ProductProps) => void,
     removeToCart: (product: RemoveProps) => void,
-    checkoutDone: (deliveryDone: DeliveryProps) => void,
 }
 
 export function CartContextProvider({children}: CartContextProviderProps){
     const [cartItens, setCartItens] = useState<ProductProps[]>([]);
-    const [delivery, setDelivery] = useState<DeliveryProps | undefined>(undefined);
     
     function addToCart(product: ProductProps){
 
@@ -61,19 +43,6 @@ export function CartContextProvider({children}: CartContextProviderProps){
                     name: product.name,
                     amount: product.amount,
                     price: product.price,
-                    delivery: {
-                        address: {
-                            cep: '',
-                            rua:  '',
-                            numero:  '',
-                            bairro:  '',
-                            cidade:  '',
-                            complemento:  '',
-                            uf:  '',
-                        },
-                        phone:  '',
-                        methodPayment:  '',
-                    },
                 }]
             );
         }
@@ -91,17 +60,11 @@ export function CartContextProvider({children}: CartContextProviderProps){
         }
         setCartItens(newCart);
     }
-
-    function checkoutDone(deliveryDone: DeliveryProps){
-        setDelivery(deliveryDone);
-    }
     return(
         <CartContext.Provider value={{
             cartItens,
             addToCart,
             removeToCart,
-            delivery,
-            checkoutDone,
         }}>{children}</CartContext.Provider>
     );
 }
