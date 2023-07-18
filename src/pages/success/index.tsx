@@ -6,7 +6,7 @@ import { CartContext } from '../../contexts/CartContext';
 
 export function SuccessPage(){
     
-    const {delivery, cartItens} = useContext(CartContext);
+    const {delivery} = useContext(CartContext);
 
     return (
         <SuccessContainer>

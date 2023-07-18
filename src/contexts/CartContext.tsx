@@ -61,6 +61,19 @@ export function CartContextProvider({children}: CartContextProviderProps){
                     name: product.name,
                     amount: product.amount,
                     price: product.price,
+                    delivery: {
+                        address: {
+                            cep: '',
+                            rua:  '',
+                            numero:  '',
+                            bairro:  '',
+                            cidade:  '',
+                            complemento:  '',
+                            uf:  '',
+                        },
+                        phone:  '',
+                        methodPayment:  '',
+                    },
                 }]
             );
         }
