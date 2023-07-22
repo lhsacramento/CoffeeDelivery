@@ -33,19 +33,6 @@ export function ShortCardCoffee({name}: ShortCardCoffeeProps){
                                         name: iten.name,
                                         amount: 1,
                                         price: iten.price,
-                                        delivery :{
-                                            address: {
-                                                cep:  '',
-                                                rua: '',
-                                                numero:  '',
-                                                bairro:  '',
-                                                cidade:  '',
-                                                complemento:  '',
-                                                uf:  '',
-                                            },
-                                        phone:  '',
-                                        methodPayment: '',
-                                        } 
                                     })
                                 }
                             }}><Plus size={14}/></button>
@@ -56,19 +43,6 @@ export function ShortCardCoffee({name}: ShortCardCoffeeProps){
                                         name: iten.name,
                                         amount: -1,
                                         price: iten.price,
-                                        delivery :{
-                                            address: {
-                                                cep:  '',
-                                                rua: '',
-                                                numero:  '',
-                                                bairro:  '',
-                                                cidade:  '',
-                                                complemento:  '',
-                                                uf:  '',
-                                            },
-                                        phone:  '',
-                                        methodPayment: '',
-                                        } 
                                     })
                                 }
                             }}><Minus size={14}/></button>
