@@ -20,6 +20,7 @@ interface CartProps{
     cartItens: ProductProps[] | undefined,
     addToCart: (product: ProductProps) => void,
     removeToCart: (product: RemoveProps) => void,
+    resetCart: () => void,
 }
 
 export function CartContextProvider({children}: CartContextProviderProps){
@@ -60,11 +61,18 @@ export function CartContextProvider({children}: CartContextProviderProps){
         }
         setCartItens(newCart);
     }
+
+    function resetCart(){
+        setCartItens([]);
+    }
+
+
     return(
         <CartContext.Provider value={{
             cartItens,
             addToCart,
             removeToCart,
+            resetCart,
         }}>{children}</CartContext.Provider>
     );
 }

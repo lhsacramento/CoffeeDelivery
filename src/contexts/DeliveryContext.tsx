@@ -29,7 +29,7 @@ interface DeliveryProps{
 
 
 
-export function CartContextProvider({children}: DeliveryContextProviderProps){
+export function DeliveryContextProvider({children}: DeliveryContextProviderProps){
     const [delivery, setDelivery] = useState<DeliveryProps>();
     
     function setDeliveryLocation(product: DeliveryProps){

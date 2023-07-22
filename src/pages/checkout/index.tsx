@@ -10,8 +10,8 @@ import { DeliveryContext } from '../../contexts/DeliveryContext';
 export function CheckoutPage(){
 
     const navigate = useNavigate();
-    const {cartItens} = useContext(CartContext);
-    const { setDeliveryLocation} = useContext(DeliveryContext);
+    const {cartItens, resetCart} = useContext(CartContext);
+    const { setDeliveryLocation } = useContext(DeliveryContext);
 
     const [creditCardButtonSelected, setCreditCardButtonSelected] = useState(false);
     const [debitCardButtonSelected, setDebitCardButtonSelected] = useState(false);
@@ -84,8 +84,11 @@ export function CheckoutPage(){
                 phone: telefoneValue,
                 methodPayment: getMethodPayment(),
             };    
-            setDeliveryLocation(deliveryInfo);
+
+            setDeliveryLocation(deliveryInfo); 
+            resetCart();
             navigate('/success');
+            
         }else{
             alert('Preencha todos os campos corretamente!');
         }

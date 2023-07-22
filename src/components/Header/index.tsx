@@ -3,8 +3,16 @@ import { MapPin } from '@phosphor-icons/react';
 import { CartButton } from './CartButton';
 import {LogoButton} from './LogoButton'
 import { NavLink } from 'react-router-dom';
+import { DeliveryContext } from '../../contexts/DeliveryContext';
+import {useContext} from 'react';
 
 export function Header(){
+
+    const { delivery } = useContext(DeliveryContext);
+    const myLocation = delivery ? `${delivery.address.cidade} - ${delivery.address.uf}` : 'Não Definida';
+    
+
+
     return (
         <HeaderContainer>
             <NavLink to='/'>
@@ -14,7 +22,7 @@ export function Header(){
                 <LocationAndCartButton>
                     <LocationContainer>             
                         <MapPin weight='fill' size={22}></MapPin>
-                        <span> Rio de Janeiro - RJ</span>
+                        <span> {myLocation} </span>
                     </LocationContainer>
                     <div>
                         <CartButton />
