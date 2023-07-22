@@ -25,6 +25,21 @@ export const ShortCardContainer = styled.div`
     &>span{
         font-weight: bold;
     }
+
+
+    @media (max-width: 1170px) {
+        width: 100%;
+    }
+
+    @media (max-width: 450px) {
+        flex-direction: column;
+
+        &>div{
+            gap: 0;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
 `;
 
 export const CoffeeInformations = styled.div`
@@ -45,6 +60,14 @@ export const CoffeeInformations = styled.div`
         height: 2rem;
         align-items: center;
         justify-content: space-between;
+    }
+
+    @media (max-width: 450px) {
+        &>div{
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
     }
 `;
 

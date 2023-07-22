@@ -19,6 +19,14 @@ export const ContentContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: 2.5rem;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+
+        &>img{
+            scale: 70%;
+        }
+    }
 `;
 
 export const OrderInfo = styled.div`

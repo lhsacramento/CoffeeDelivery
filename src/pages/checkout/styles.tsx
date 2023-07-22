@@ -6,6 +6,15 @@ export const CheckoutContainer = styled.main`
     width: 100%;
     gap: 2rem;
     padding-bottom: 0;
+
+    @media (max-width: 1170px) {
+        flex-direction: column;
+
+        &>div{
+            width: 100%;
+            max-width: 100%;
+        }
+    }
 `;
 
 export const DeliveryPlaceContainer = styled.div`
@@ -63,6 +72,10 @@ export const FormDeliveryPlace = styled.form`
 
     #numero{
         width: 25%;
+
+        @media (max-width: 450px) {
+            width: 50%;
+        }
     }
 
     #complemento{
@@ -71,6 +84,10 @@ export const FormDeliveryPlace = styled.form`
 
     #uf{
         width: 10%;
+
+        @media (max-width: 450px) {
+            width: 20%;
+        }
     }
 
     input{
@@ -97,7 +114,17 @@ export const PaymentMethodesContainer = styled.div`
 export const PaymentButtonsContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;    
+    margin-top: 2rem;  
+    
+    @media (max-width: 1170px) {
+        justify-content: space-evenly;
+    }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
 `;
 
 interface ButtonProps{
@@ -145,6 +172,7 @@ export const CardContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
 `;
 
 export const CardsContainer = styled.div`
@@ -165,6 +193,10 @@ export const CoffeeCardLabelInfo = styled.div`
     display: flex;
     justify-content: space-between;
     min-width: 15rem;
+
+    @media (max-width: 450px) {
+        min-width: 0;
+    }
 `;
 
 export const CoffeeCardInfoContainer = styled.div`

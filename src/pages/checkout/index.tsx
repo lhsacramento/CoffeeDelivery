@@ -177,8 +177,8 @@ export function CheckoutPage(){
                         </CoffeeCardLabelInfo>
 
                         <TotalAmount>
-                            <span><b>Total</b></span>
-                            <span><b>{`R$ ${(totalPriceItens + 3.50).toFixed(2)}`}</b></span>
+                            <span>Total</span>
+                            <span>{`R$ ${(totalPriceItens + 3.50).toFixed(2)}`}</span>
                         </TotalAmount>
                         <button onClick={handleSubmitDelivery}>Confirmar Pedido</button>
                     </CoffeeCardInfoContainer>

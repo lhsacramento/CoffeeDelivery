@@ -10,6 +10,16 @@ export const HeaderContainer = styled.header`
     a{
         text-decoration: none;
     }
+
+    @media (max-width: 450px) {
+        flex-direction: column;
+        gap: 1rem;
+
+
+        &>a>button{
+            gap: 2rem;
+        }
+    }
 `;
 
 export const LocationAndCartButton = styled.button`

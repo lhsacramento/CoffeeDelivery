@@ -5,7 +5,7 @@ export const HomeContainer = styled.main`
 `;
 
 export const IntroContainer = styled.section`
-    height: 34rem;
+    min-height: 34rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,6 +24,26 @@ export const IntroContainer = styled.section`
         height: 360px;
         width: 476px;
     }    
+
+    @media (max-width: 970px) {
+        flex-direction: column-reverse;
+    }
+
+    @media (max-width: 450px) {
+        &>img{            
+            scale: 70%;
+        }
+
+        &>div>h1{
+            font-family: 'Baloo 2', monospace;
+            font-size: 2rem;
+        }
+
+        &>p{
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+    }
 `;
 
 export const BenefitsContainer = styled.div`
@@ -35,10 +55,9 @@ export const BenefitsContainer = styled.div`
     ;
     gap: 1rem;
 
-    @media (max-width: 930px){
+    @media (max-width: 450px){
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
     }
 `;
 
@@ -54,6 +73,8 @@ const BaseTextConteiner = styled.span`
         justify-content: center;
         width: 2rem;
         height: 2rem;
+        min-width: 2rem;
+        min-height: 2rem;
         color: ${props => props.theme['white']};
     }
 `;
@@ -86,6 +107,10 @@ export const CoffeeListSection = styled.section`
     h1{
         font-size: 2rem;
         font-family: 'Baloo 2', monospace;
+    }
+
+    @media (max-width: 930px){
+        margin-top: 4rem;
     }
 `;
 
