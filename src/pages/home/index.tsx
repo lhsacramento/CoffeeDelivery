@@ -3,7 +3,7 @@ import IntroImg from '../../assets/img/introImg.png';
 import {ShoppingCart, Timer, Package, Coffee} from '@phosphor-icons/react';
 import { CoffeeCard } from './coffeeCard';
 import {Coffees} from '../../coffees';
-
+/////
 export function HomePage(){
 
     const coffees = Coffees;
