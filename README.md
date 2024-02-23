@@ -22,11 +22,11 @@ Este foi um projeto incrível que gostei muito de fazer. Integrar o front-end co
 
 
 ### Como executar na sua máquina?
-1- Abra o projeto em algum editor (eu utilizo o visual studio code);
-2- No terminal, instale as dependencias do projeto "npm install";
-3- Após aguardar o término da instalação, execute o comando "npm run dev" para iniciar a aplicação;
-4- Logo em seguida, em outro terminal, digite o comando "npm run dev:server" para iniciar o "backend" do Json Server;
-5- Pronto, agora é só acessar a aplicação!
+- 1- Abra o projeto em algum editor (eu utilizo o visual studio code);
+- 2- No terminal, instale as dependencias do projeto "npm install";
+- 3- Após aguardar o término da instalação, execute o comando "npm run dev" para iniciar a aplicação;
+- 4- Logo em seguida, em outro terminal, digite o comando "npm run dev:server" para iniciar o "backend" do Json Server;
+- 5- Pronto, agora é só acessar a aplicação!
 
 
 ### Imagens do projeto
